@@ -38,7 +38,7 @@ class TestCalc(unittest.TestCase):
 
     def test_array(self): 
         
-        array = random.randint(0,10000000,1,20)
+        array = random.randint(0,10000000,(1,20))
 
         Number1 = random.choice(array)
         Number2 = random.choice(array)
