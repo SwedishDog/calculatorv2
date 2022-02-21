@@ -3,7 +3,7 @@ import random
 from calculator import ConversionRate
 
 class TestCalc(unittest.TestCase):
-    def test_correct(self): 
+    def test_int(self): 
 
         Number1 = random.randint(0,1000000)
         Number2 = random.randint(0,1000000)
@@ -13,3 +13,41 @@ class TestCalc(unittest.TestCase):
         result = ConversionRate(Number1, Number2)
 
         self.assertEqual(result, ExpectedValue)
+    
+    def test_float(self): 
+
+        Number1 = random.random(0,1000000)
+        Number2 = random.random(0,1000000)
+
+        ExpectedValue = Number1 + Number2
+
+        result = ConversionRate(Number1, Number2)
+
+        self.assertEqual(result, ExpectedValue)
+
+    def test_uniform(self): 
+
+        Number1 = random.uniform(0,1000000)
+        Number2 = random.uniform(0,1000000)
+
+        ExpectedValue = Number1 + Number2
+
+        result = ConversionRate(Number1, Number2)
+
+        self.assertEqual(result, ExpectedValue)
+
+    def test_array(self): 
+        
+        array = random.randint(1000000, size=(20))
+
+        Number1 = random.choice(array)
+        Number2 = random.choice(array)
+
+
+        ExpectedValue = Number1 + Number2
+
+        result = ConversionRate(Number1, Number2)
+
+        self.assertEqual(result, ExpectedValue)
+
+    
