@@ -36,18 +36,5 @@ class TestCalc(unittest.TestCase):
 
         self.assertEqual(result, ExpectedValue)
 
-    def test_array(self): 
-        
-        array = random.randint(0,10000000,(1,20))
-
-        Number1 = random.choice(array)
-        Number2 = random.choice(array)
-
-
-        ExpectedValue = Number1 + Number2
-
-        result = ConversionRate(Number1, Number2)
-
-        self.assertEqual(result, ExpectedValue)
 
     
