@@ -16,8 +16,8 @@ class TestCalc(unittest.TestCase):
     
     def test_float(self): 
 
-        Number1 = random.random(0,1000000)
-        Number2 = random.random(0,1000000)
+        Number1 = random.random()
+        Number2 = random.random()
 
         ExpectedValue = Number1 + Number2
 
@@ -38,7 +38,7 @@ class TestCalc(unittest.TestCase):
 
     def test_array(self): 
         
-        array = random.randint(1000000, size=(20))
+        array = random.randint(0,10000000,20)
 
         Number1 = random.choice(array)
         Number2 = random.choice(array)
