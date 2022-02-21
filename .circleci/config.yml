@@ -29,10 +29,13 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       - checkout
+      - python/install-packages
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: pytest
+          command: python -m pytest --junitxml=test-results.xml --cov
+      - store_test_results:
+          path: test-results.xml 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
