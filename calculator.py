@@ -1,5 +1,4 @@
-class ConversionRate:
-    def ConversionRate(Number1, Number2):
+def ConversionRate(Number1, Number2):
 
         rate = Number1 + Number2
     
